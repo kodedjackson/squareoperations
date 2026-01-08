@@ -2,11 +2,10 @@
     <!-- Left side - Form -->
     <div class="w-full md:w-1/2 flex items-center justify-center px-4 py-12">
         <div class="w-full max-w-md">
+            <div class="max-w-36 h-24">
+                <x-application-logo />
+            </div>
             <div class="mb-8">
-                <div class="flex items-center space-x-2 mb-8">
-                    <div class="w-8 h-8 rounded-lg hero-gradient"></div>
-                    <span class="text-2xl font-bold text-gray-900">SquareOperations</span>
-                </div>
                 <h1 class="text-4xl font-bold text-gray-900 mb-2">Welcome Back</h1>
                 <p class="text-gray-600">Sign in to your account to continue</p>
             </div>
@@ -18,18 +17,18 @@
             </div>
             @endsession
 
-            <form class="space-y-6" action="{{ route('login') }}">
+            <form class="space-y-6" action="{{ route('login') }}" method="POST">
                 @csrf
                 <!-- Email -->
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                    <input type="email" placeholder="you@company.com" class="w-full px-4 py-2 border border-gray-300 rounded-lg input-focus" required>
+                    <input type="email" name="email" placeholder="you@company.com" class="w-full px-4 py-2 border border-gray-300 rounded-lg input-focus" required>
                 </div>
 
                 <!-- Password -->
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">Password</label>
-                    <input type="password" placeholder="••••••••" class="w-full px-4 py-2 border border-gray-300 rounded-lg input-focus" required>
+                    <input type="password" name="password" placeholder="••••••••" class="w-full px-4 py-2 border border-gray-300 rounded-lg input-focus" required>
                 </div>
 
                 <!-- Remember & Forgot -->

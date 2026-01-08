@@ -2,11 +2,10 @@
 
     <div class="w-full md:w-1/2 flex items-center justify-center px-4 py-12">
         <div class="w-full max-w-md">
+            <div class="max-w-36 h-24">
+                <x-application-logo />
+            </div>
             <div class="mb-8">
-                <div class="flex items-center space-x-2 mb-8">
-                    <div class="w-8 h-8 rounded-lg hero-gradient"></div>
-                    <span class="text-2xl font-bold text-gray-900">SquareOperations</span>
-                </div>
                 <h1 class="text-4xl font-bold text-gray-900 mb-2">Welcome</h1>
                 <p class="text-gray-600">Register to get started in to your account to continue</p>
             </div>
